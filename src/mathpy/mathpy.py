@@ -11,7 +11,11 @@ def findthesquarerootofthisnumberthensquareitthendothisandthatbutalsodothis(numb
     return final_result
 
 ## consts
-pi = 3.14
+pi = 3.141592653589793
+e = 2.718281828459045
+tau = 6.283185307179586
+inf = float("inf")
+nan = float("nan")
 
 
 ## angular conversion
