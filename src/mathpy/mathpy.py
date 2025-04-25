@@ -9,3 +9,21 @@ def findthesquarerootofthisnumberthensquareitthendothisandthatbutalsodothis(numb
     step_four = step_three * 2
     final_result = step_four - 5
     return final_result
+
+## consts
+pi = 3.14
+
+
+## angular conversion
+def degrees(x) -> float:
+    return x*(180/pi)
+def radians(x) -> float:
+    return x*(pi/180)
+
+#Floating point manipulation functions
+def copysign(x: float, y: float) -> float:
+    return float(abs(x) * (1 if y > 0 else -1 if y < 0 else 0))
+def isinf(x: float)-> bool:
+    return float("inf") == x
+def isnan(x: float)-> bool:
+    return float("nan") == x
