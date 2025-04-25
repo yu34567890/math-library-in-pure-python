@@ -1,4 +1,4 @@
-
+import time
 
 ## consts
 pi = 3.141592653589793
@@ -6,6 +6,21 @@ e = 2.718281828459045
 tau = 6.283185307179586
 inf = float("inf")
 nan = float("nan")
+
+
+## Power, exponential Functions
+def pow(x,y):
+    return x**y
+def exp(x):
+    return e**x 
+def exp2(x):
+    return 2**x
+def expm(x):
+    return (e**x)-1
+def sqrt(x):
+    return pow(x,0.5)
+def cbrt(x):
+    cube_root = pow(x, 1/3)
 
 ## sily funcs
 def findthesquarerootofthisnumberthensquareitthendothisandthatbutalsodothis(number):
@@ -21,10 +36,16 @@ def findthesquarerootofthisnumberthensquareitthendothisandthatbutalsodothis(numb
     return final_result
 
 def calculatemeaningofeverything():
+    time.sleep(236682000000000)
     return 42
+
 def owo():
     return ":3"
-
+def prove_two_plus_two_is_five():
+    x = 2
+    y = 2
+    z = (x * y)-(x * y - 4)+(y - x + 2)
+    return z
 ## angular conversion
 def degrees(x) -> float:
     return x*(180/pi)
@@ -94,6 +115,7 @@ def tangent(x:float, terms:int=10) -> float:
     if cos_val == 0:
         return float('nan')
     return sin_val / cos_val
+
 
 ## logarithmic functions
 

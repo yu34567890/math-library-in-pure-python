@@ -1,4 +1,2 @@
-
 import math
-from src.mathpy import mathpy
-print(math.ulp(1.0))
+print(math.exp2(32))
