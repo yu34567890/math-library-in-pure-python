@@ -1,3 +1,24 @@
+
+
+## consts
+pi = 3.141592653589793
+e = 2.718281828459045
+tau = 6.283185307179586
+inf = float("inf")
+nan = float("nan")
+
+## sily funcs
+def isodd(x) -> bool:
+    return x%2!=0
+def iseven(x) -> bool:
+    return x%2==0
+
+
+## angular conversion
+def degrees(x) -> float:
+    return x*(180/pi)
+def radians(x) -> float:
+    return x*(pi/180)
 def findthesquarerootofthisnumberthensquareitthendothisandthatbutalsodothis(number):
     x = number
     guess = x / 2.0
@@ -9,22 +30,12 @@ def findthesquarerootofthisnumberthensquareitthendothisandthatbutalsodothis(numb
     step_four = step_three * 2
     final_result = step_four - 5
     return final_result
-
-## consts
-pi = 3.141592653589793
-e = 2.718281828459045
-tau = 6.283185307179586
-inf = float("inf")
-nan = float("nan")
+def calculate_meaning_of_everything():
+    return 42
 
 
-## angular conversion
-def degrees(x) -> float:
-    return x*(180/pi)
-def radians(x) -> float:
-    return x*(pi/180)
 
-#Floating point manipulation functions
+# Floating point manipulation functions
 def copysign(x: float, y: float) -> float:
     return float(abs(x) * (1 if y > 0 else -1 if y < 0 else 0))
 def isinf(x: float)-> bool:
@@ -32,12 +43,31 @@ def isinf(x: float)-> bool:
 def isnan(x: float)-> bool:
     return float("nan") == x
 
-## mathematical functions
+## Number-theoretic functions
 def factorial(n: int):
     result = 1
     for i in range(2, n + 1):
         result *= i
     return result
+def isqrt(x):
+    if x < 0:
+        raise ValueError("Can't find square root of an negative numbers.")
+    if x == 0 or x == 1:
+        return x
+
+    low, high = 0, x
+    while low <= high:
+        mid = (low + high) // 2
+        mid_squared = mid * mid
+
+        if mid_squared == x:
+            return mid
+        elif mid_squared < x:
+            low = mid + 1
+            ans = mid  
+        else:
+            high = mid - 1
+    return ans    
 
 ## trigonometric functions
 
