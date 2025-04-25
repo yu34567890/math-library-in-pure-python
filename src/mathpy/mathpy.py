@@ -8,17 +8,6 @@ inf = float("inf")
 nan = float("nan")
 
 ## sily funcs
-def isodd(x) -> bool:
-    return x%2!=0
-def iseven(x) -> bool:
-    return x%2==0
-
-
-## angular conversion
-def degrees(x) -> float:
-    return x*(180/pi)
-def radians(x) -> float:
-    return x*(pi/180)
 def findthesquarerootofthisnumberthensquareitthendothisandthatbutalsodothis(number):
     x = number
     guess = x / 2.0
@@ -30,9 +19,17 @@ def findthesquarerootofthisnumberthensquareitthendothisandthatbutalsodothis(numb
     step_four = step_three * 2
     final_result = step_four - 5
     return final_result
-def calculate_meaning_of_everything():
-    return 42
 
+def calculatemeaningofeverything():
+    return 42
+def owo():
+    return ":3"
+
+## angular conversion
+def degrees(x) -> float:
+    return x*(180/pi)
+def radians(x) -> float:
+    return x*(pi/180)
 
 
 # Floating point manipulation functions
@@ -44,6 +41,10 @@ def isnan(x: float)-> bool:
     return float("nan") == x
 
 ## Number-theoretic functions
+def isodd(x) -> bool:
+    return x%2!=0
+def iseven(x) -> bool:
+    return x%2==0
 def factorial(n: int):
     result = 1
     for i in range(2, n + 1):
