@@ -71,6 +71,19 @@ def factorial(n: int):
     for i in range(2, n + 1):
         result *= i
     return result
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+def lcm(a, b):
+    return abs(a * b) // gcd(a,b)
+def comb(n, k):
+    if k == 0 or k == n:
+        return 1
+    return factorial(n) // (factorial(k) * factorial(n - k))
+def perm(n,k):
+    return factorial(n)//(factorial(n-k))
+
 def isqrt(x):
     if x < 0:
         raise ValueError("Can't find square root of an negative numbers.")
@@ -93,6 +106,28 @@ def isqrt(x):
 
 ## trigonometric functions
 
+def atan(x: float) -> float:
+    if x < 0:
+        return -atan(-x)  
+    if x > 1:
+        xi = 1/x
+        return pi/2 - (
+            xi - (xi**3)/3 + (xi**5)/5 - (xi**7)/7 + (xi**9)/9 -
+            (xi**11)/11 + (xi**13)/13 - (xi**15)/15 + (xi**17)/17 -
+            (xi**19)/19 + (xi**21)/21 - (xi**23)/23 + (xi**25)/25 -
+            (xi**27)/27 + (xi**29)/29
+        )
+    elif x == 1:
+        return pi/4 # idk why but every number except 1 is precise
+    else:
+        return (
+            x - (x**3)/3 + (x**5)/5 - (x**7)/7 + (x**9)/9 -
+            (x**11)/11 + (x**13)/13 - (x**15)/15 + (x**17)/17 -
+            (x**19)/19 + (x**21)/21 - (x**23)/23 + (x**25)/25 -
+            (x**27)/27 + (x**29)/29
+        )
+def atan2(y,x):
+    return atan(y/x)
 def sine(x:float, terms:int=10) -> float:
     x = radians(x)
     sine_val = 0
