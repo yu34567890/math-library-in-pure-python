@@ -12,14 +12,14 @@
 - [✔] `perm(n, k)`
 
 ### Floating-point arithmetic
-- [❌] `ceil(x)`
-- [❌] `fabs(x)`
+- [✔] `ceil(x)`
+- [✔] `fabs(x)`
 - [❌] `floor(x)`
 - [❌] `fma(x, y, z)`
 - [❌] `fmod(x, y)`
 - [❌] `modf(x)`
 - [❌] `remainder(x, y)`
-- [❌] `trunc(x)`
+- [✔] `trunc(x)`
 
 ### Floating point manipulation functions
 - [✔] `copysign(x, y)`

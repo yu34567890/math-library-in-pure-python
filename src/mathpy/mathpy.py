@@ -61,6 +61,19 @@ def isinf(x: float)-> bool:
 def isnan(x: float)-> bool:
     return float("nan") == x
 
+# Floating point arithmetic
+def ceil(x: float):
+    if x.is_integer():
+        return x
+    elif x<0:
+        return int(x)
+    else:
+        return int(x)+1
+def fabs(x: float)-> float:
+    return float(abs(x))
+def trunc(x: float)->int:
+    return int(x)
+        
 ## Number-theoretic functions
 def isodd(x) -> bool:
     return x%2!=0
@@ -177,3 +190,26 @@ def log(x:float, b:int, terms:int=20) -> float:
     if x <= 0:
         return float('nan')
     return ln(x, terms) / ln(b, terms)
+
+
+## additional functions
+# might be useful for certain scenarios
+def mpow(x:int, y:int, p:int) -> int: 
+    """
+    Computes (x ^ y) % p using modular exponentiation.
+        x (int): The base.
+        y (int): The exponent.
+        p (int): The modulus.
+    """
+    res = 1     
+    x = x % p 
+    if (x == 0) :
+        return 0
+    while (y > 0) :
+        
+        if ((y & 1) == 1) :
+            res = (res * x) % p
+        y = y >> 1      
+        x = (x * x) % p
+        
+    return res
