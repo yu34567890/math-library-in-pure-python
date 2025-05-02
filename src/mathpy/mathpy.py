@@ -20,7 +20,9 @@ def expm(x):
 def sqrt(x):
     return pow(x,0.5)
 def cbrt(x):
-    cube_root = pow(x, 1/3)
+    return pow(x, 1/3)
+
+
 
 ## sily funcs
 def findthesquarerootofthisnumberthensquareitthendothisandthatbutalsodothis(number):
