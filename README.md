@@ -14,11 +14,11 @@
 ### Floating-point arithmetic
 - [✔] `ceil(x)`
 - [✔] `fabs(x)`
-- [❌] `floor(x)`
-- [❌] `fma(x, y, z)`
-- [❌] `fmod(x, y)`
-- [❌] `modf(x)`
-- [❌] `remainder(x, y)`
+- [✔] `floor(x)`
+- [✔] `fma(x, y, z)`
+- [✔] `fmod(x, y)`
+- [✔] `modf(x)`
+- [✔] `remainder(x, y)`
 - [✔] `trunc(x)`
 
 ### Floating point manipulation functions
@@ -62,12 +62,12 @@
 - [✔] `tan(x)`
 
 ### Hyperbolic functions
-- [❌] `acosh(x)`
-- [❌] `asinh(x)`
-- [❌] `atanh(x)`
-- [❌] `cosh(x)`
-- [❌] `sinh(x)`
-- [❌] `tanh(x)`
+- [✔] `acosh(x)`
+- [✔] `asinh(x)`
+- [✔] `atanh(x)`
+- [✔] `cosh(x)`
+- [✔] `sinh(x)`
+- [✔] `tanh(x)`
 
 ### Special functions
 - [❌] `erf(x)`

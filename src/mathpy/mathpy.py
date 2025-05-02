@@ -62,7 +62,7 @@ def isnan(x: float)-> bool:
     return float("nan") == x
 
 # Floating point arithmetic
-def ceil(x: float):
+def ceil(x: float) -> int:
     if x.is_integer():
         return x
     elif x<0:
@@ -71,9 +71,23 @@ def ceil(x: float):
         return int(x)+1
 def fabs(x: float)-> float:
     return float(abs(x))
+def floor(x: float) -> int:
+    if x >= 0 or x == int(x):
+        return int(x)
+    return int(x)
+def fma(x: float,y: float,z: float) -> float:
+    return (x*y)+z
 def trunc(x: float)->int:
     return int(x)
-        
+def fmod(x:float, y: float) -> float:
+    x - trunc(x / y) * y
+def modf(x: float) -> tuple[float,float]:
+    return (x-int(x),int(x))
+def remainder(x: float,y: float) -> float:
+    return x%y
+
+
+
 ## Number-theoretic functions
 def isodd(x) -> bool:
     return x%2!=0
@@ -191,7 +205,19 @@ def log(x:float, b:int, terms:int=20) -> float:
         return float('nan')
     return ln(x, terms) / ln(b, terms)
 
-
+## Hyperbolic functions
+def acosh(x):
+    return ln(x+sqrt(pow(x,2)-1))
+def asinh(x):
+    return ln(x+sqrt(pow(x,2)+1))
+def atanh(x):
+    return ln((1+x)/(1-x))/2
+def cosh(x):
+    return (pow(e,x) + pow(e,-x)) / 2
+def sinh(x):
+    return (pow(e,x) - pow(e,-x)) / 2
+def tanh(x):
+    return sinh(x)/cosh(x)
 ## additional functions
 # might be useful for certain scenarios
 def mpow(x:int, y:int, p:int) -> int: 
@@ -213,3 +239,4 @@ def mpow(x:int, y:int, p:int) -> int:
         x = (x * x) % p
         
     return res
+
