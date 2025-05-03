@@ -62,6 +62,13 @@ def isinf(x: float)-> bool:
     return float("inf") == x
 def isnan(x: float)-> bool:
     return float("nan") == x
+def ldexp(x,i):
+    return x * (2**i)
+def nextafter(a,b,c):
+    return a + (b-a)/c
+
+def ulp(x):
+    return x + 2**-52 - x
 
 # Floating point arithmetic
 def ceil(x: float) -> int:

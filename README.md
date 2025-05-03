@@ -25,9 +25,9 @@
 - [✔] `copysign(x, y)`
 - [✔] `isinf(x)`
 - [✔] `isnan(x)`
-- [❌] `ldexp(x, i)`
-- [❌] `nextafter(x, y, steps)`
-- [❌] `ulp(x)`
+- [✔] `ldexp(x, i)`
+- [✔] `nextafter(x, y, steps)`
+- [✔] `ulp(x)`
 
 ### Power, exponential and logarithmic functions
 - [✔] `cbrt(x)`
