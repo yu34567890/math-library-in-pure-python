@@ -120,26 +120,16 @@ def comb(n, k):
 def perm(n,k):
     return factorial(n)//(factorial(n-k))
 
-def isqrt(x):
-    if x < 0:
-        raise ValueError("Can't find square root of an negative numbers.")
-    if x == 0 or x == 1:
-        return x
-
-    low, high = 0, x
-    while low <= high:
-        mid = (low + high) // 2
-        mid_squared = mid * mid
-
-        if mid_squared == x:
-            return mid
-        elif mid_squared < x:
-            low = mid + 1
-            ans = mid  
-        else:
-            high = mid - 1
-    return ans    
-
+def isqrt(x): # some random ahh dude on the internet gave me the code legit fr fr
+    g = 0x8000
+    c = 0x8000
+    while True:
+        if g * g > x:
+            g ^= c
+        c >>= 1
+        if c == 0:
+            return g
+        g |= c
 ## trigonometric functions
 
 def atan(x: float) -> float:

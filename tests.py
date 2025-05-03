@@ -1,5 +1,5 @@
 from src.mathpy import mathpy
-import math
 
+result = []
 
-print(mathpy.sumprod((2,2),(4,4)),math.sumprod((2,2),(4,4)))
+print(mathpy.isqrt(65535))
