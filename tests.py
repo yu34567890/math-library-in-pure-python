@@ -2,4 +2,4 @@ from src.mathpy import mathpy
 import math
 
 
-print(math.dist([1, 1], [2, 2]))  # Distance between (1,2) and (4,6)
+print(mathpy.sumprod((2,2),(4,4)),math.sumprod((2,2),(4,4)))
