@@ -206,6 +206,38 @@ def log(x:float, b:int, terms:int=20) -> float:
     if x <= 0:
         return float('nan')
     return ln(x, terms) / ln(b, terms)
+## Summation and product functions
+def dist(p,q):
+    result = 0
+    i = 0
+    while i<len(p):
+        result += (p[i] - q[i])**2 + (p[i+1] - q[i+1])**2
+        i+=2
+    return sqrt(result)
+def fsum(iterable):
+    total = 0.0
+    c = 0.0  
+    for x in iterable:
+        y = x - c      
+        t = total + y  
+        c = (t - total) - y 
+        total = t
+    return total 
+
+def hypot(coordinates):
+    return sqrt(sum(x**2 for x in coordinates))
+def prod(iterable, start=1):
+    result = start
+    for num in iterable:
+        result *= num
+    return result
+def sumprod(p,q):
+    i = 0
+    result = 0
+    while i<len(p):
+        result += p[i] *  q[i]
+        i+=1
+    return result
 
 ## Hyperbolic functions
 def acosh(x):

@@ -42,11 +42,11 @@
 - [✔] `sqrt(x)`
 
 ### Summation and product functions
-- [❌] `dist(p, q)`
-- [❌] `fsum(iterable)`
-- [❌] `hypot(*coordinates)`
-- [❌] `prod(iterable, start)`
-- [❌] `sumprod(p, q)`
+- [✔] `dist(p, q)`
+- [✔] `fsum(iterable)`
+- [✔] `hypot(*coordinates)`
+- [✔] `prod(iterable, start)`
+- [✔] `sumprod(p, q)`
 
 ### Angular conversion
 - [✔] `degrees(x)`
